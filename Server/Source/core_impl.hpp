@@ -1717,8 +1717,6 @@ public:
 		EnableLogPrefix = *config.getBool("logging.use_prefix");
 		LogTimestampFormat = String(config.getString("logging.timestamp_format"));
 		
-		MaxBots = *config.getInt("max_bots");
-
 		config.optimiseBans();
 		config.writeBans();
 		components.load(this);
