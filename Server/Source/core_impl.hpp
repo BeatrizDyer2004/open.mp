@@ -1716,6 +1716,8 @@ public:
 		EnableLogTimestamp = *config.getBool("logging.use_timestamp");
 		EnableLogPrefix = *config.getBool("logging.use_prefix");
 		LogTimestampFormat = String(config.getString("logging.timestamp_format"));
+		
+		MaxBots = *config.getInt("max_bots");
 
 		config.optimiseBans();
 		config.writeBans();
@@ -2073,6 +2075,11 @@ public:
 			return "Invalid";
 		}
 		return PlayerWeaponNames[index];
+	}
+
+	getMaxBots() override
+	{
+		return MaxBots;
 	}
 
 	void onPlayerConnect(IPlayer& player) override
