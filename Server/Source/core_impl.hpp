@@ -2075,11 +2075,6 @@ public:
 		return PlayerWeaponNames[index];
 	}
 
-	getMaxBots() override
-	{
-		return MaxBots;
-	}
-
 	void onPlayerConnect(IPlayer& player) override
 	{
 		playerInit(player);
